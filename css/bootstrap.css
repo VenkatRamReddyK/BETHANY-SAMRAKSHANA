@@ -1123,6 +1123,8 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
+  max-height: 500px;
+  min-height: 500px;
   height: auto;
 }
 .img-rounded {
@@ -1480,6 +1482,7 @@ blockquote {
   margin: 0 0 20px;
   font-size: 17.5px;
   border-left: 5px solid #eee;
+  border-right: 5px solid #eee!important;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -6247,6 +6250,7 @@ button.close {
 }
 .carousel-inner > .item {
   position: relative;
+  min-height: 500px;
   display: none;
   -webkit-transition: .6s ease-in-out left;
        -o-transition: .6s ease-in-out left;

@@ -4,10 +4,26 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+.carousel-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 500px;
+    min-height: 500px;
+}
+
+.flexDiv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
     background-color: #000;
 }
@@ -25,7 +41,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -63,9 +79,9 @@ a:focus {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #000;
 }
 
@@ -100,7 +116,7 @@ a:focus {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
     background-color: transparent;
 }
 
@@ -115,7 +131,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .3);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -128,14 +144,14 @@ a:focus {
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
     }
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
         background: #000;
     }
 }
@@ -189,7 +205,7 @@ a:focus {
     margin-top: 15px;
     padding: 7px 16px;
     border: 2px solid #fff;
-    border-radius: 100%!important;
+    border-radius: 100% !important;
     font-size: 40px;
     color: #fff;
     background: 0 0;
@@ -202,7 +218,7 @@ a:focus {
 .btn-circle:focus {
     outline: 0;
     color: #fff;
-    background: rgba(255,255,255,.1);
+    background: rgba(255, 255, 255, .1);
 }
 
 .btn-circle i.animated {
@@ -223,7 +239,7 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -240,7 +256,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0% {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -265,8 +281,8 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    /*background: url(../img/downloads-bg.jpg) no-repeat center center scroll;*/
-    background-color: gray;
+    background: url('https://www.bharaticharitabletrust.org/images/slider/cc5922d57a59f37ea3e0ffa2ceab1b96.jpg') no-repeat center center scroll;
+    /* background-color: gray; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -297,7 +313,7 @@ a:focus {
 .btn {
     border-radius: 0;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -351,13 +367,13 @@ footer p {
 ::-moz-selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .2);
 }
 
 ::selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .2);
 }
 
 img::selection {
@@ -369,27 +385,27 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
+    webkit-tap-highlight-color: rgba(255, 255, 255, .2);
 }
 
 
-#donate-us{
+#donate-us {
     border: 1px solid #42dca3;
     color: #42dca3;
     background-color: transparent;
 }
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
     width: 100%;
     margin: auto;
-    max-width: 50%;
-    max-height: 50%;
+    object-fit: contain;
+    max-height: 500px;
+    min-height: 500px;
     overflow: hidden;
 }
-#donateUs{
+
+#donateUs {
     width: 60%;
     margin: auto;
 }
-
-
